@@ -1,0 +1,39 @@
+
+R version 4.1.2 (2021-11-01) -- "Bird Hippie"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> mailR::send.mail(
++   from = Sys.getenv('THEMADSTATTER_SMTP_USER'), 
++   to = Sys.getenv('THEMADSTATTER_SMTP_USER'), 
++   subject = "Update R Packages Rout", 
++   body = paste(readLines('update_r_packages.Rout'), collapse = '\n'), 
++   smtp = list(
++     host.name = "smtp.office365.com", 
++     port = 587, 
++     user.name = Sys.getenv('THEMADSTATTER_SMTP_USER'), 
++     passwd = Sys.getenv('THEMADSTATTER_SMTP_PASS'), 
++     tls = TRUE
++   ),
++   authenticate = TRUE, 
++   send = TRUE
++ )
+[1] "Java-Object{org.apache.commons.mail.SimpleEmail@59906517}"
+> 
+> proc.time()
+   user  system elapsed 
+   3.48    6.15   13.64 

@@ -11,5 +11,6 @@ does not permit setting all necessary options.
 
 1. edit `schedule.bat` to reflect correct user account.
 2. edit `update_r_packages.R` to reflect desired library location.
-3. run `schedule.bat` to register the task with task manager.
-4. edit the task in task manager to run when user not logged in.
+3. edit `mail_update_r_packages_rout.R` with desired smtp settings.
+4. run `schedule.bat` to register the task with task manager.
+5. edit the task in task manager to run when user not logged in.
